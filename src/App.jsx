@@ -23,8 +23,8 @@ const App = () => {
     <div className='app'>
       <div className='card'>
         <h1 className='heading'>{advice}</h1>
-        <button type='button' onClick={fetchAdvice}>
-          get me a fucking advice
+        <button className='button' onClick={fetchAdvice}>
+          <span>Give me an advice!</span>
         </button>
       </div>
     </div>
