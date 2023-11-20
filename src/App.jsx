@@ -4,7 +4,7 @@ import axios from "axios"
 
 const App = () => {
   const [advice, setAdvice] = useState("")
-  console.log(advice)
+
   useEffect(() => {
     fetchAdvice()
   }, [])
@@ -19,7 +19,16 @@ const App = () => {
       .catch((error) => console.log(error))
   }
 
-  return <h1>Hi</h1>
+  return (
+    <div className='app'>
+      <div className='card'>
+        <h1 className='heading'>{advice}</h1>
+        <button type='button' onClick={fetchAdvice}>
+          get me a fucking advice
+        </button>
+      </div>
+    </div>
+  )
 }
 
 export default App
